@@ -1,0 +1,750 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>e-Devlet Kapısı</title>
+    </head>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        #box{
+            width: 50%;
+            height: 40%;
+            position: center;
+            background-color:white;
+            position: relative;
+            left: 25%;
+            transition: 0.25s;
+            margin-top: 12%;
+            border-radius: 10px;
+            height: 580px;
+        }
+        /* ilk iki satır */
+        #box #asd{
+            margin-top: 2%;
+        }
+        #box div #table1{
+            display: inline-block;
+        }
+
+        #box div #table1 .td1{
+            text-align: left;
+            padding-left: 31px;
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #4A4E50;
+        }
+        #box div #table1 .td2{
+            text-align: left;
+            font-weight:bold;
+            font-family: sans-serif;
+            padding-left: 10%;
+            font-size: 13px;
+            color: #5F8BB4;
+            width: 200px;
+        }
+        #box div #govtr{
+            padding-left: 39%;
+        }
+        /* dış çizgi */
+        #box #body{
+            margin: 2%;
+            border: 1px solid rgb(167, 202, 212);
+            border-radius:3px;
+        }
+        /* Üst giriş seçme kısmı */
+        #box #body #Giris-sec{
+            display: flex;
+        }
+        #box #body #Giris-sec .nav-item{
+            margin-left: 1%;
+            padding-right: 5%;
+            height: 48px;
+            border-right: 1px solid rgba(0, 0, 0, 0.26);
+            cursor:pointer ;
+        }
+
+        #box #body #Giris-sec .nav-item .icons{
+            margin-bottom: -2%;
+            cursor:pointer ;
+        }
+        #box #body #Giris-sec .nav-item .btn1{
+            background-color: rgba(173, 216, 230, 0);
+            border: 0;
+            cursor:pointer ;
+            margin: 15px 0px;
+        }
+        #box #body #Giris-sec .nav-item-last{
+            margin-top: 0.5%;
+            cursor:pointer ;
+            margin-left: 1%;
+        }
+        #box #body #Giris-sec .nav-item-last .btn1{
+            background-color: rgba(173, 216, 230, 0);
+            border: 0;
+            cursor:pointer ;
+            margin: 15px 0px;
+        }
+        /* Ortak CSS ler */
+        #box #body p{
+            margin-top: -0.5%;
+            padding-left: 15px;
+            margin-bottom: -0.1%;
+            font-family: sans-serif;
+            font-size: 14px;
+            color: #4A4E50;
+        }
+        #box #body a{
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #5F8BB4;
+            text-decoration: none;
+        }
+        .hr2{
+            width: 95%;
+            align-items: center;
+            margin-top: 2%;
+            opacity: 0.1;
+        }
+        #iconKitap{
+            padding-left: 15px;
+            margin-bottom: -0.5%;
+        }
+        .td3{
+            font-family: sans-serif;
+            padding-left: 15px;
+            font-size: 14px;
+            color: #4A4E50;
+            width: 33%;
+        }
+        .td4 {
+            width: 270px;
+        }
+        .td4 input{
+            border: 1px solid rgba(0, 0, 0, 0.466);
+            border-radius: 3px;
+            height: 27px;
+            width: 250px;
+            margin-right: 50%;
+
+        }
+        .td5{
+            width: 120px;
+            cursor:pointer ;
+        }
+        .td6{
+            cursor:pointer ;
+        }
+        .td7{
+            width: 31.5%;
+        }
+        .td8{
+            padding-left: 20px;
+            font-size: 12px;
+            font-family: sans-serif;
+            color: #4A4E50;
+        }
+        .td9{
+            width: 26%;
+        }
+        .Aciklama{
+            background-color: #F7FAFC;
+            border-style: dashed;
+            border-width: 1px;
+            border-color: solid rgba(0, 0, 0, 0.479);
+            border-radius: 20px;
+            margin: 3%;
+        }
+        .Aciklama ul li {
+            padding-right: 3%;
+            padding-left: 3%;
+            padding-top: 1%;
+            font-family: sans-serif;
+            font-size: 15px;
+            color: #4A4E50;
+        }
+        .Aciklama ul a {
+            font-family: sans-serif;
+            color: #0051ff;
+            font-size: 15px;
+        }
+        /* E-Devlet Şifresi */
+        #box #body #e-devletSifresi {
+            display: "";
+        }
+        #box #body #e-devletSifresi #hr1{
+            margin-top: -0.4%;
+            float: right;
+            width: 79.8%;
+            opacity: 0.5;
+        }
+
+        /* Mobil İmza */
+        #box #body #mobilImza{
+            display: none;
+        }
+
+        #box #body #mobilImza #hr1{
+            margin-top: -0.4%;
+            float: left;
+            width: 20%;
+            opacity: 0.5; 
+        }
+        #box #body #mobilImza #hr1-2{
+            margin-top: -0.4%;
+            float: right;
+            width: 62.1%;
+            opacity: 0.5; 
+        }
+        #box #body #mobilImza table tr .td6{
+            padding-left: 3px;
+            margin-top: 20px;
+            width: 400px;
+            display: flex;
+        }
+        #box #body #mobilImza .td6 .radio{
+            border: 1px solid rgba(0, 0, 0, 0.336);
+            margin-right: 2%;
+            height: 24px;
+            padding-top: 6px;
+            padding-right: 6px;
+            font-size: 14px;
+            font-family: sans-serif;
+        }
+
+        /* E-İmza */
+        #box #body #e-imza{
+            display: none;
+        }
+        #box #body #e-imza #hr1{
+            margin-top: -0.4%;
+            float: left;
+            width: 37.5%;
+            opacity: 0.5; 
+        }
+        #box #body #e-imza #hr1-2{
+            margin-top: -0.4%;
+            float: right;
+            width: 46.5%;
+            opacity: 0.5; 
+        }
+
+        #box #body #e-imza .Aciklama ul #dikkat {
+            color: #dd0e0e;
+        }
+
+        /* Kimlik Kart */
+        #box #body #kimlikKart{
+            display: none;
+        }
+        #box #body #kimlikKart #hr1{
+            margin-top: -0.4%;
+            float: left;
+            width: 53%;
+            opacity: 0.5; 
+        }
+        #box #body #kimlikKart #hr1-2{
+            margin-top: -0.4%;
+            float: right;
+            width: 23.5%;
+            opacity: 0.5; 
+        }
+
+
+        /* İnternet Banka */
+        #box #body #internetBanka{
+            display: none;
+        }
+        #box #body #internetBanka #hr1{
+            margin-top: -0.4%;
+            float: left;
+            width: 76%;
+            opacity: 0.5; 
+        }
+        /* Butonlar */
+        #box #body #buttons{
+            display: flex;
+            margin-left: 35%;
+            padding-bottom: 2%;
+        }
+        #box #body #buttons #iptal{
+            background-color: #F6F6F6 ;
+            color: rgba(74,78,80,.9);
+            border-radius: 45px;
+            font-weight: 400;
+            width: 100px;
+            height: 37px;
+            font-size: 15px;
+            border: 1px rgba(52,122,161,.3) solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:2%;
+        }
+        #box #body #buttons #girisYap{
+            background-color: #347AA1;
+            color: white;
+            border-radius: 45px;
+            font-weight: 400;
+            width: 110px;
+            height: 37px;
+            font-size: 15px;
+            border: 1px rgba(52,122,161,.3) solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:2%;
+        }
+        /* Buton alt kısmı */
+        #box #alt span{
+            font-size: 12px;
+            font-family: sans-serif;
+            color: #4a4e509f;
+            padding-left: 2%;
+        }
+        #box #alt{
+            display: flex;
+            display: inline-block;
+            width: 100%;
+            
+        }
+        #box #alt a{
+            float: right;
+            margin-right: 2.2%;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #5F8BB4;
+        }
+        .banklist {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-left: 3%;
+            padding-right: 3%;
+            justify-content: center;
+        }
+        .banklist  .logo{
+            margin-left: 2%;
+            margin-bottom: 2%;
+            width: 80px;
+            border: 1px solid rgba(0, 0, 0, 0.164);
+            height: 45px;
+            padding: 1%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <body >
+        <div id="box">
+            <img src="asd.PNG" alt="" id="asd">
+            <div >
+                <table id="table1">
+                    <tr>
+                        <td class="td1">
+                            Giriş Yapılacak Adres
+                        </td>
+                        <td class="td2">
+                            www.turkiye.gov.tr
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td1">
+                             Giriş Yapılacak Uygulama
+                            
+                        </td >
+                        <td class="td2">
+                            e-Devlet Kapısı
+                        </td>
+                    </tr>
+                </table>
+                <img src="govtr.png" alt="" height="32px" width="150" id="govtr">
+                
+            </div>
+            
+            <div id="body">
+                <div id="Giris-sec">
+                    <div class="nav-item" onclick="edevlet()">
+                        <img class="icons" src="klavye.PNG" alt="" height="19px">
+                        <button class="btn1" >e-Devlet Şifresi</button>
+                    </div>
+                    <div class="nav-item" onclick="mobilImza()">
+                        <img class="icons" src="telefon.PNG" alt="" height="23px">
+                        <button class="btn1">Mobil İmza</button>
+                    </div>
+                    <div class="nav-item" onclick="eimza()">
+                        <img class="icons" src="usb.PNG" alt="" height="28px">
+                        <button class="btn1">e-İmza</button>
+                    </div>
+                    <div class="nav-item" onclick="kimlikKart()">
+                        <img class="icons" src="tc.PNG" alt="" height="19px">
+                        <button class="btn1">T.C. Kimlik Kartı</button>
+                    </div>
+                    <div class="nav-item-last" onclick="internetBanka()">
+                        <img class="icons" src="kart.PNG" alt="" height="21px">
+                        <button class="btn1">İnternet Bankacılığı</button>
+                    </div>
+                </div>
+                <div id="e-devletSifresi">
+                    <div>
+                        <hr id="hr1">
+                        <br>
+                    </div>
+                    <p>T.C. Kimlik Numaranızı ve e-Devlet Şifrenizi kullanarak kimliğiniz doğrulandıktan sonra işleminize kaldığınız yerden devam edebilirsiniz.</p>
+                    <img src="kitap.PNG" alt="" height="20px" id="iconKitap">
+                    <a >e-Devlet Şifresi Nedir, Nasıl Alınır?</a>
+                    <br><hr class="hr2">
+                    <table>
+                        <tr>
+                            <td class="td3">
+                                * T.C. Kimlik No
+                            </td>
+                            <td class="td4">
+                                <input type="text" class="gizle1">
+                            </td>
+                            <td class="td5">
+                                <a ><img src="keyboard.PNG" alt=""  height="15px">Sanal Klavye</a>
+                            </td>
+                            <td class="td6">
+                                <a onclick="gizle1()"><img src="gizle.PNG" alt=""  height="15px">Yazarken Gizlee </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="hr2">
+                    <table>
+                        <tr>
+                            <td class="td3">
+                                * e-Devlet Şifresi
+                            </td>
+                            <td class="td4">
+                                <input type="text">
+                            </td>
+                            <td class="td5">
+                                <a ><img src="keyboard.PNG" alt=""  height="15px">Sanal Klavye</a>
+                            </td>
+                            <td class="td6">
+                                <a ><img src="gizle.PNG" alt=""  height="15px">Şifremi Unuttum</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="td7"></td>
+                            <td class="td8">*e-Devlet <img src="kitap.PNG" alt="" height="17px"> <a >şifrenizi unutmanız</a>  durumunda doğruladığınız cep telefonunuzdan yenileme <br>
+                                 işlemi yapabilirsiniz.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="mobilImza">
+                    <div>
+                        <hr id="hr1">
+                        <hr id="hr1-2">
+                        <br>
+                    </div>
+                    <p>Cep telefonunuz ve hattınıza kayıtlı mobil imzanız ile kimliğiniz doğrulandıktan sonra işleminize kaldığınız yerden devam edebilirsiniz. Eğer 
+                        farklı bir yöntem ile kimlik doğrulaması yapmak istiyorsanız, yukarıda bulunan diğer 
+                        seçenekleri kullanarak da sisteme giriş yapabilirsiniz.</p>
+                    <img src="kitap.PNG" alt="" height="20px" id="iconKitap">
+                    <a >Mobil İmza Nedir, Nasıl Alınır?</a>
+                    <br><hr class="hr2">
+                    <table>
+                        <tr>
+                            <td class="td3">
+                                * T.C. Kimlik No
+                            </td>
+                            <td class="td4">
+                                <input type="text" class="gizle2">
+                            </td>
+                            <td class="td5">
+                                <a onclick="gizle2()"><img src="gizle.PNG" alt=""  height="15px"> Yazarken Gizle</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="hr2">
+                    <table>
+                        <tr>
+                            <td class="td3">
+                                * e-Devlet Şifresi
+                            </td>
+                            <td class="td4">
+                                <input type="text">
+                            </td>
+                            <td class="td5"> </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="td9"></td>
+                            <td class="td8">Mobil imzanın tanımlı olduğu,10 haneli cep telefonu numaranızı giriniz <b>Örn</b>:5XXXXXXXXX</td>
+                        </tr>
+                    </table>
+                    <hr class="hr2">
+                    <table>
+                        <tr>
+                            <td class="td3">* GSM Operatörünüz</td>
+                            <td class="td6">
+                                <div class="radio">
+                                    <input type="radio" >
+                                    <label >Türk Telekom</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" >
+                                    <label >Turkcell</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" >
+                                    <label >Vodafone</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td3"></td>
+                            <td class=td8> Hattınızın hizmet aldığı GSM operatörünü seçiniz.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="e-imza">
+                    <div>
+                        <hr id="hr1">
+                        <hr id="hr1-2">
+                        <br>
+                    </div>
+                    <p>Elektronik İmzanız ile eşleşen kimlik numaranızı girdikten sonra işleminize devam edebilirsiniz. Eğer farklı bir yöntem ile kimlik doğrulaması
+                         yapmak istiyorsanız, yukarıda bulunan diğer seçenekleri kullanarak da sisteme giriş yapabilirsiniz.
+                        seçenekleri kullanarak da sisteme giriş yapabilirsiniz.</p><br>
+                    <img src="kitap.PNG" alt="" height="20px" id="iconKitap">
+                    <a >Elektronik İmza Nedir, Nasıl Alınır?</a><br><br>
+                    <img src="kitap.PNG" alt="" height="20px" id="iconKitap">
+                    <a >E-İmza Uygulaması ile Nasıl Giriş Yapılır?</a>
+
+                    <br><hr class="hr2">
+                    <div class="Aciklama">
+                        <ul>
+                            <li>Aşağıdaki alana kimlik numaranızı yazınız.</li>
+                            <li>Masaüstünüzde bulunan e-imza uygulamasını açınız ve ekrandaki işlem kodunu giriniz. ( e-Devlet Kapısı e-İmza 
+                                Uygulaması'nı bilgisayarınıza indirmelisiniz. Uygulamayı indirmek için <a href="">tıklayınız</a>. Daha önce indirdiyseniz tekrar 
+                                indirmenize gerek yoktur.)</li>
+                            <li id="dikkat">Eğer uygulamayı indirmede sorun yaşıyor ya da bağlantı hatası alıyorsanız linkteki dosyayı indiriniz. Dosyayı indirmek için <a href="">tıklayınız.</a> </li>
+                            <li>İmzalama işlemini gerçekleştiriniz.</li>
+                        </ul>
+                    </div>
+                    <table>
+                        <tr>
+                            <td class="td3">
+                                * T.C. Kimlik No
+                            </td>
+                            <td class="td4">
+                                <input type="text" class="gizle3">
+                            </td>
+                            <td class="td5">
+                                <a onclick="gizle3()"><img src="gizle.PNG" alt=""  height="15px"> Yazarken Gizle</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="kimlikKart">
+                    <div>
+                        <hr id="hr1">
+                        <hr id="hr1-2">
+                        <br>
+                    </div>
+                    <p>Kimlik numaranızı girdikten sonra işleminize devam edebilirsiniz. Eğer farklı bir yöntem ile kimlik doğrulaması yapmak istiyorsanız, yukarıda
+                         bulunan diğer seçenekleri kullanarak da sisteme giriş yapabilirsiniz.</p>
+                    <img src="kitap.PNG" alt="" height="20px" id="iconKitap">
+                    <a >Elektronik İmza Nedir, Nasıl Alınır?</a>
+
+                    <hr class="hr2">
+                    <div class="Aciklama">
+                        <ul>
+                            <li>Aşağıdaki alana kimlik numaranızı yazınız.</li>
+                            <li>Masaüstünüzde bulunan Kimlik Kartı uygulamasını açınız ve ekrandaki işlem kodunu giriniz. ( e-Devlet Kapısı Kimlik Kartı
+                                Uygulaması'nı bilgisayarınıza indirmelisiniz. Uygulamayı indirmek için <a href="">tıklayınız</a>. Daha önce indirdiyseniz tekrar 
+                                indirmenize gerek yoktur.)</li>
+                            <li>Kimlik kartı doğrulama işlemini gerçekleştiriniz.</li>
+                        </ul>
+                    </div>
+                    <table>
+                        <tr>
+                            <td class="td3">
+                                * T.C. Kimlik No
+                            </td>
+                            <td class="td4">
+                                <input type="text" class="gizle4">
+                            </td>
+                            <td class="td5">
+                                <a onclick="gizle4()"><img src="gizle.PNG" alt=""  height="15px"> Yazarken Gizle</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="internetBanka">
+                    <div>
+                        <hr id="hr1">
+                        <br>
+                    </div>
+                    <p >Aşağıdaki bankaların İnternet şubeleri aracılığı ile başka bir şifreye ihtiyaç duymadan, güvenli bir şekilde e-Devlet Kapısı'na giriş yapabilirsiniz. 
+                        Bunun için aşağıdaki listeden İnternet bankacılığı kullanıcı hesabınız bulunan bankayı seçmeniz ve İnternet bankacılığı kullanıcı bilgileriniz ile 
+                        giriş yapmanız yeterlidir.</p>
+
+                    <hr class="hr2">
+                    <div class="banklist">
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0046.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0203.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0135.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0125.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0134.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0211.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0103.png" width="64px">
+                        </div> <br>
+
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0111.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0062.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0012.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0123.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0099.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0205.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0146.png" width="64px">
+                        </div> <br>
+
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0059.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0032.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0206.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0064.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0015.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0210.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0067.png" width="64px">
+                        </div> <br>
+
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0010.png" width="64px">
+                        </div>
+                        <div class="logo">
+                            <img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0209.png" width="64px">
+                        </div>
+                    </div>   
+                </div>
+                <hr class="hr2">
+            <div id="buttons"> 
+                    
+                <button id="iptal"> <img src="arrowl.png" alt="" height="17px" >İptal Et</button>
+                <button id="girisYap"> Giris Yap <img src="arrowr.png" alt="" height="17px"></button>
+            </div>
+            </div>
+            <div id="alt">
+                <span>© 2021, Ankara - Tüm Hakları Saklıdır</span>
+                <a >Hızlı Çözüm Merkezi</a>
+                <a >Gizlilik ve Güvenlik</a>
+            </div>
+        </div>
+
+        <script>
+            function edevlet(){
+                document.querySelector('#e-devletSifresi').style.display="block";
+                document.querySelector('#kimlikKart').style.display="none";
+                document.querySelector('#buttons').style.display="";
+                document.querySelector('#internetBanka').style.display="none";
+                document.querySelector('#mobilImza').style.display="none";
+                document.querySelector('#e-imza').style.display="none";
+                document.querySelector('#box').style.height="580px";
+                document.querySelector('#box').style.marginTop="12%";
+
+            }
+            function mobilImza(){
+                document.querySelector('#mobilImza').style.display="block";
+                document.querySelector('#internetBanka').style.display="none";
+                document.querySelector('#buttons').style.display="";
+                document.querySelector('#kimlikKart').style.display="none";
+                document.querySelector('#e-imza').style.display="none";
+                document.querySelector('#e-devletSifresi').style.display="none";
+                document.querySelector('#box').style.height="675px";
+                document.querySelector('#box').style.marginTop="10%";
+            }
+            function eimza(){
+                document.querySelector('#e-imza').style.display="block";
+                document.querySelector('#internetBanka').style.display="none";
+                document.querySelector('#buttons').style.display="";
+                document.querySelector('#mobilImza').style.display="none";
+                document.querySelector('#kimlikKart').style.display="none";
+                document.querySelector('#e-devletSifresi').style.display="none";
+                document.querySelector('#box').style.height="790px";
+                document.querySelector('#box').style.marginTop="5%";
+            }
+            function kimlikKart(){
+                document.querySelector('#kimlikKart').style.display="block";
+                document.querySelector('#internetBanka').style.display="none";
+                document.querySelector('#buttons').style.display="";
+                document.querySelector('#e-imza').style.display="none";
+                document.querySelector('#mobilImza').style.display="none";
+                document.querySelector('#e-devletSifresi').style.display="none";
+                document.querySelector('#box').style.height="680px";
+                document.querySelector('#box').style.marginTop="10%";
+            }
+            function internetBanka(){
+                document.querySelector('#internetBanka').style.display="block";
+                document.querySelector('#buttons').style.display="none";
+                document.querySelector('#kimlikKart').style.display="none";
+                document.querySelector('#e-imza').style.display="none";
+                document.querySelector('#mobilImza').style.display="none";
+                document.querySelector('#e-devletSifresi').style.display="none";
+                document.querySelector('#box').style.height="690px";
+                document.querySelector('#box').style.marginTop="10%";
+            }
+            function gizle1(){
+                document.querySelector('.gizle1').type="password";
+            }
+            function gizle2(){
+                document.querySelector('.gizle2').type="password";
+            }
+            function gizle3(){
+                document.querySelector('.gizle3').type="password";
+            }
+            function gizle4(){
+                document.querySelector('.gizle4').type="password";
+            }
+            function gizle5(){
+                document.querySelector('.gizle5').type="password";
+            }
+        </script>
+    </body>
+</html>
