@@ -1,0 +1,467 @@
+body{
+    display: block;
+    margin: 0;
+    background-image: url("./img/pattern2.jpg");
+    
+}
+/* 
+    HEADER1
+*/
+body #header1{
+    background-color: #212327;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+
+}
+body #header1 a{
+    margin-left: 0.3%;
+}
+body #header1 b{
+    margin-left: 0.3%;
+    color: white;
+    cursor: pointer;
+    font-family: 'Open Sans';
+}
+body #header1 .btn1{
+    background-color:#21232700;
+    color: white;
+    border: none;
+    cursor: pointer ;
+    padding: 0;
+}
+body #header1 img{
+    padding: 0 1%;
+}
+/* 
+    NAVBAR
+*/
+body #navbar{
+    background-color: #cd2c1d;
+}
+body #navbar #logos {
+    margin-left: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body #navbar #nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body #navbar #nav-menu button{
+    font-family: 'Open Sans';
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-size: 20px;
+    padding: 0.2% 1%;
+    cursor: pointer;
+}
+.menus{
+    display: flex;
+    justify-content: center;
+}
+.kurum{
+    color:white;
+}
+body #navbar #nav-menu button:hover{
+    background-color: rgba(255, 255, 255, 0.452);
+}
+
+#kurumsal{
+    position: absolute;
+    display: none;
+    width: 64.5%;
+    background-color: #ffffffc5;
+    z-index: 2;
+    filter: drop-shadow(-2px 4px 10px #222222);
+}
+#akademik{
+    position: absolute;
+    display: none;
+    width: 64.5%;
+    background-color: #ffffffc5;
+    z-index: 2;
+    filter: drop-shadow(-2px 8px 10px #222222);
+}
+#ogrenci{
+    position: absolute;
+    display: none;
+    width: 64.5%;
+    background-color: #ffffffc5;
+    z-index: 2;
+    filter: drop-shadow(-2px 8px 10px #222222);
+}
+#arastirma{
+    margin-left: -10.8%;
+    position: absolute;
+    display: none;
+    background-color: #ffffffc5;
+    z-index: 2;
+    filter: drop-shadow(-2px 8px 10px #222222);
+}
+#bilgi{
+    margin-left: 6%;
+    position: absolute;
+    display: none;
+    background-color: #ffffffc5;
+    z-index: 2;
+    filter: drop-shadow(-2px 8px 10px #222222);
+}
+#kampus{
+    margin-left: 22.6%;
+    position: absolute;
+    display: none;
+    background-color: #ffffffc5;
+    z-index: 2;
+    filter: drop-shadow(-2px 8px 10px #222222);
+}
+.menus .main {
+    padding: 5% 10% 5% 10%;
+}
+.menus .main li{
+    list-style-type: none;
+    font-size: 14px;
+    font-family: 'Open Sans',  sans-serif;
+}
+.menu-main{
+    display: flex;
+}
+.menus .menu-main .baslik h1{
+    font-size: 15px;
+    margin: 0;
+    font-family: 'BebasNeueRegular', sans-serif;
+    color: #cd2c1d;
+}
+.menus .menu-main .baslik{
+    margin: 3% 0 3% 4%;
+}
+.menus .menu-main .baslik hr{
+    padding: 0;
+    margin:0;
+    width: 70%;
+    height: 2px;
+    border: none;
+    color: #cd2c1d;
+    background-color: #cd2c1d;
+}
+.menus .menu-main .baslik li{
+    list-style-type: none;
+    font-size: 14px;
+    font-family: 'Open Sans',  sans-serif;
+}
+.menus .menu-main .baslik .baslik-extra{
+    margin-top: 20%;
+}
+
+
+#haberler{
+    background-color: #212327;
+}
+#haberler div{
+    background-image: url("./img/pattern2.png") ;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#haberler div h1{
+    margin: 0 0 0 10%;
+    padding: 4%;
+    color: white;
+    font-weight: lighter;
+    font-size: 35px;
+    font-family: 'Open Sans',  sans-serif;
+}
+#haberler div p{
+    margin: 0.9% 10% 0 0;
+    padding: 4% 4% 0 4%;
+    color: white;
+    font-weight: lighter;
+    font-size: 18px;
+    font-family: 'Open Sans',  sans-serif;
+    cursor: pointer;
+}
+
+
+/*
+CONTENT
+ */
+
+#content{
+    margin: 1% 7%;
+    display: flex;
+    justify-content: space-between;
+}
+#content #new{
+    width: 73%;
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(-9px 8px 10px #222222);
+    border-top: 15px solid #cd2c1d;
+    margin-bottom:4%;
+}
+#content #allNews{
+    width: 25%;
+    background-image: url("./img/pattern1.png") ;
+    border-top: 15px solid #cd2c1d;
+    background-size: 100%;
+    background-color: #212327;
+    filter: drop-shadow(-9px 8px 10px #222222);
+    height: max-content;
+}
+#content #new #newBody{
+    width:90%;
+    padding: 5%;
+}
+#content #new #newBody #newCover{
+    width:100%;
+}
+#content #new #newBody #icerik h1{
+    margin-bottom: 0;
+    font-family: 'Open Sans',  sans-serif;
+}
+#content #new #newBody #icerik hr{
+    float: left;
+    margin: 0;
+    width: 80%;
+    height: 4px;
+    border: none;
+    color: #cd2c1d;
+    background-color: #cd2c1d;
+}
+#content #new #newBody #icerik p{
+    font-size: 15px;
+    font-family: 'Open Sans';
+}
+#content #new #newBody #icerik b{
+    cursor: pointer;
+}
+#content #allNews .sideNew:hover {
+    background-color: #b82b1e;
+    cursor: pointer;
+}
+#content #allNews h1{
+    margin: 4% 8% 0 8%;
+    color: white;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+#content #allNews hr{
+    margin: 0 8% 3% 8%;
+    color: white;
+    width: 70%;
+    height: 3px;
+    border: none;
+    background-color: white;
+}
+#content #allNews h2{
+    margin: 0 8%;
+    padding-top: 3%;
+    color: white;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+#content #allNews h3{
+    margin: 0 8%;
+    padding-bottom: 3%;
+    color: white;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+/* 
+    PHOTOS
+*/
+#photos{
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    margin-bottom:4%;
+}
+#photos section{
+    left: auto;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    filter: drop-shadow(3px 8px 15px #222222);
+
+}
+#photos section .photo{
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+}
+#photos .photo picture{
+    width:100%;
+    height: 300px;
+}
+#photos .photo picture img{
+    height: 158px;
+    z-index:1;
+}
+#photos .photo picture img:hover{
+    z-index:2;
+    height: 200px;
+    filter: drop-shadow(2px 0px 10px #222222);
+    border: 1px solid black;
+}
+#photos #prev3{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    cursor: default;
+    right: 0%;
+    height: 158px;
+    margin-top: -5px;
+    width: 6%;
+    background: linear-gradient(270deg ,#00000000,#0000009f);
+    border: 0;
+}
+#photos #prev3:hover{
+    background: linear-gradient(270deg ,#00000000,#000000);
+}
+#photos #next3{
+    position: absolute;
+    right: 0;
+    cursor: default;
+    right: 0%;
+    height: 158px;
+    margin-top: -5px;
+    width: 6%;
+    background: linear-gradient(90deg ,#00000000,#0000009f);
+    border: 0;
+}
+#photos #next3:hover{
+    background: linear-gradient(90deg ,#00000000,#000000);
+}
+#photos #prev3 img{
+    opacity: 0.8;
+    margin-left: -60%;
+    filter: drop-shadow(-2px 8px 1px #222222);
+}
+
+#photos #next3 img{
+    opacity: 0.8;
+    margin-right: -50%;
+    filter: drop-shadow(-2px 8px 1px #222222);
+}
+
+/* 
+    FOOTER
+*/
+.footer{
+    width: 100%;
+    height: 30%;
+    background-color: #212327;
+}
+.footer .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer #footerHR{
+    height: 3px;
+    width: 70%;
+    color: white;
+    background-color: white;
+}
+.footer .header img{
+    margin: 1%;
+}
+.footer .header h1{
+    width:  500px;
+    font-size: 30px;
+    font-family: 'BebasNeueRegular', sans-serif;
+    color: #ffffff;
+}
+.footer .footer-inner{
+    display: flex;
+    justify-content: center;
+}
+.footer .footer-inner .menu{
+    margin: 3% 3%;
+}
+.footer .footer-inner .menu h1{
+    font-size: 22px;
+    font-family: 'BebasNeueRegular', sans-serif;
+    color: #ffffff;
+    margin: 0;
+}
+.footer .footer-inner .menu hr{
+    width: 100%;
+    left: 0;
+    margin: 0;
+}
+.footer .footer-inner .menu li{
+    padding-top: 6%;
+    padding-left: 5%;
+    list-style-type: none;
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.footer .footer-last{
+    display: flex;
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 10px;
+}
+.footer .footer-last .icons{
+    margin-left: 16%;
+}
+.footer .footer-last span{
+    margin-left: 15%;
+}
+.footer .footer-last li{
+    list-style-type: none;
+}
+.footer .footer-last .info{
+    margin-left: 20%;
+}
+
+/*
+MACBOOK AİR 
+*/
+
+@media only screen and (min-width:2450px){
+    #kurumsal{
+        width: 51.2%;
+    }
+    #akademik{
+        width: 51.2%;
+    }
+    #ogrenci{
+        width: 51.2%;
+    }
+    #arastirma{
+        margin-left: -8.8%;
+    }
+    #bilgi{
+        margin-left: 4.4%;
+    }
+    #kampus{
+        margin-left: 17.6%;
+    }
+
+
+    .footer .footer-last .icons{
+        margin-left: 22%;
+    }
+    .footer .footer-last span{
+        margin-left: 17%;
+    }
+    .footer .footer-last li{
+        list-style-type: none;
+    }
+    .footer .footer-last .info{
+        margin-left: 20%;
+    }
+}

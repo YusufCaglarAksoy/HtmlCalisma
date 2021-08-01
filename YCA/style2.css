@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    font-style: italic;
+}
+
+body{
+    margin-top: 5%;
+    min-height: 84vh;
+    max-height: 84vh;
+    background-image: url("img/backround.png");
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+#navbar ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#navbar ul li{
+    list-style: none;
+    margin-left: 80px;
+    width: 300px;
+    padding-bottom: 20px;
+}
+#navbar ul li a{
+    text-decoration: none;
+    padding: 10px 60px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+#navbar ul li a:hover,
+#navbar ul li a.active
+{
+    background: #fff;
+    color: #2a1055;
+}
+
+.logo
+{
+    -webkit-transition: all .3s ease-in;
+    margin-bottom: 3%;
+}
+.logo:hover
+{
+    z-index:1;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(1);
+    transform: scale(1.25);
+}
+
+#Hakkimda{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.me{
+    -webkit-transition: all .3s ease-in;
+    margin-bottom: 3%;
+    border-radius: 50%;
+    border: 4px solid white;
+
+}
+
+.me:hover{
+    z-index:1;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(1);
+    transform: scale(1.25);
+}
+
+#verticle{
+    border-left: 4px solid white;
+    height: 400px;
+    position: absolute;
+    width: 50%;
+    left: 40%;
+    margin-left: 10%;
+}
+#Aciklama {
+    padding-right: 25%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+#Aciklama h2{
+    font-size: 2.5em;
+    color: #fff;
+}
+
+#Aciklama h4{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 600;
+}
+
+#Yetenekler{
+    background: linear-gradient(to top,#fdc2a0,transparent);
+    min-height: 100vh;
+}
+
+#Yetenekler h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: #222831;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+#yetenekler{
+    padding-left: 40%;
+    width: 60%;
+}
+.yetenekPuani{
+    float:right;
+}
+
+.logos{
+    padding-left: 20%;
+    padding-bottom: 3%;
+}
+
+.logos img{
+    padding-left: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.YetenekAciklama{
+    padding-left: 32%;
+    padding-top: 5%;
+    text-align: center;
+    width: 65%;
+}
+
+#Projelerim{
+    min-height: 100vh;
+}

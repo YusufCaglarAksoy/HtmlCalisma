@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+}
+
+html,
+body{height: 100%;}
+
+body div ul{
+    
+}
+
+body div ul li{
+    width: calc(100% / 7);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 19px;
+    font-family: Roboto;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(255, 32, 32, 83%);
+    cursor: pointer;
+    position: relative;
+}
+
+body div ul > li:hover{
+    background-color: black;
+    color: white;
+}
+
+body div ul ul{
+    display: none;
+    width: 200px;
+}
+
+body div ul ul li {
+    width: 100%;
+}
+
+body div>ul> li:hover > ul{
+    display: block;
+    position: relative;
+    top: 100%;
+    right: 0;
+    animation-name: down;
+    animation-duration: 400ms;
+}
+
+body div ul ul ul{
+    display: none;
+}    
+
+body div ul ul li{
+    position: relative;
+}
+
+body div ul ul li:hover  >ul{
+    display: block;
+    left: 200px;
+    top: 0;
+}
+
+/*
+* animation
+*/
+
+@keyframes down{
+    from{
+        left: -50%;
+        display: none;
+    }
+    to{
+        left: 0%;
+        display: block;
+    }
+}
+
+@keyframes left{
+    from{
+        left: 0;
+        top: 0;
+        display: none;
+    }
+    to{
+        left: 100%;
+        top: 0;
+        display: block;
+    }
+}
